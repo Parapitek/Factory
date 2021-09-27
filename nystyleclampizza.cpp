@@ -1,14 +1,14 @@
-#include "nystylecheezepizza.h"
+#include "nystyleclampizza.h"
 
-NYStyleCheezePizza::NYStyleCheezePizza()
+NYStyleClamPizza::NYStyleClamPizza()
 {
-    name = "NY Style Cheeze Pizza";
+    name = "NY Style Clam Pizza";
     dough = "Thin Crust Dough";
     sauce = "Marinara Sauce";
 
     toppings.push_back("Grated Reggianoo Cheeze");
 }
 
-void NYStyleCheezePizza::cut() {
+void NYStyleClamPizza::cut() {
     cout << "Cutting the pizza into square slices" << endl;
 }

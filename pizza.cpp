@@ -2,18 +2,20 @@
 
 Pizza::Pizza()
 {
-    toppings = new QList <QString>();
+    name = new char [200];
+    dough = new char [200];
+    sauce = new char [200];
 }
 
 void Pizza::prepare() {
-    cout << "Preparing " << name.toStdString() << endl;
+    cout << "Preparing " << name << endl;
     cout << "Tossing dough..." << endl;
     cout << "Adding sauce..." << endl;
     cout << "Adding toppings: " << endl;
-    for (int i = 0; i < toppings->size(); i++) {
-        cout << "\t" << toppings->at(i).toStdString() << endl;
+    for (list <char*>::iterator it = toppings.begin(); it!=toppings.end(); ++it) 
+        cout << "\t" << *it << endl;
     }
-}
+
 
 void Pizza::bake() {
     cout << "Bake for 25 minutes at 350" << endl;
@@ -27,6 +29,6 @@ void Pizza::box() {
     cout << "Place pizza in official PizzaStore box" << endl;
 }
 
-QString Pizza::getName() {
+char* Pizza::getName() {
     return name;
 }

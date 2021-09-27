@@ -5,19 +5,19 @@ NYStylePizzaStore::NYStylePizzaStore()
 
 }
 
-Pizza* NYStylePizzaStore::createPizza(QString type) {
+Pizza* NYStylePizzaStore::createPizza(char* type) {
     Pizza *pizza;
-    if (type == "cheese") {
+    if (strcmp(type, "cheese") ==0) {
         pizza = new NYStyleCheezePizza();
     }
-    /*else if (type == "pepperoni") {
+    else if (strcmp(type, "pepperoni") ==0) {
         pizza = new NYStylePepperoniPizza();
     }
-    else if (type == "clam") {
+    else if (strcmp(type, "clam") ==0) {
         pizza = new NYStyleClamPizza();
     }
-    else if (type == "veggie") {
+    else if (strcmp(type, "veggie") ==0) {
         pizza = new NYStyleVeggiePizza();
-    }*/
+    }
     return pizza;
 }

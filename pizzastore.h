@@ -8,8 +8,8 @@ class PizzaStore
 public:
     PizzaStore();
     ~PizzaStore();
-    Pizza* orderPizza(QString type);
-    virtual Pizza* createPizza(QString type) = 0;
+    Pizza* orderPizza(char* type);
+    virtual Pizza* createPizza(char* type) = 0;
 };
 
 #endif // PIZZASTORE_H

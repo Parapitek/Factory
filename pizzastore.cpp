@@ -10,7 +10,7 @@ PizzaStore::~PizzaStore()
 
 }
 
-Pizza* PizzaStore::orderPizza(QString type) {
+Pizza* PizzaStore::orderPizza(char* type) {
     Pizza *pizza;
     pizza = createPizza(type);
     pizza->prepare();
